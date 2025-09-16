@@ -1,50 +1,84 @@
 @import 'tailwindcss';
-
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
-@import "tailwindcss-animated";
-@import "tailwindcss-intersect";
-
-@font-face {
-  font-family: 'Honk';
-  src: url('/fonts/Honk-Regular-VariableFont_MORF,SHLN.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Quicksand';
-  src: url('/fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Domine';
-  src: url('/fonts/Domine-Regular.ttf') format('truetype');
-}
 
 @theme {
-  /* Her tilføjes theme variable // tokens */
+  /* Farver */
+  --color-primary: #171616; /* sort */
+  --color-secondary: #FFFFFF; /* hvid */
+  --color-accent: #E8E0E0; /* beige */
 
-  /*Farver */
-  --color-primary-400: #00E4F5;
-  --color-primary-500: #006269;
-  --color-primary-600: #006D75;
-  --color-secondary-400: #F5E400;
-  --color-secondary-500: #F5A600;
-  --color-secondary-600: #F57A00;
-
-  /*Typografi */
-  --font-display: 'Honk', monospace;
-  --font-sans: 'Quicksand', sans-serif;
-  --font-serif: 'Domine', serif;
+  /* Typografi */
+  --font-display: 'Poppins', sans-serif;
+  --font-sans: 'Poppins', sans-serif;
 }
 
 @layer base {
-
+  /* Standard baggrundsfarve */
+  body {
+    @apply bg-secondary;
+  }
 }
 
-@layer components{
+@layer components {
+  /* ========= Poppins typografi ========= */
 
+  /* Mobile styles (default) */
+  .h1-footer {
+    @apply font-[700] text-[40px] leading-tight font-sans;
+  }
+  .h1 {
+    @apply font-[700] text-[40px] leading-tight font-sans;
+  }
+  .h2 {
+    @apply font-[700] text-[30px] leading-tight font-sans;
+  }
+  .h3 {
+    @apply font-[700] text-[14px] leading-snug font-sans;
+  }
+  .h4 {
+    @apply font-[700] text-[12px] leading-snug font-sans;
+  }
+  .p {
+    @apply font-[400] text-[12px] leading-relaxed font-sans;
+  }
+  .p-small {
+    @apply font-[400] text-[14px] leading-relaxed font-sans;
+  }
+
+  /* Desktop styles (md: breakpoint) */
+  .h1-footer {
+    @apply md:text-[58px];
+  }
+  .h1 {
+    @apply md:text-[210px];
+  }
+  .h2 {
+    @apply md:text-[80px];
+  }
+  .h3 {
+    @apply md:text-[20px];
+  }
+  .h4 {
+    @apply md:text-[16px];
+  }
+  .p {
+    @apply md:text-[16px];
+  }
 }
 
-@layer utilities{
-  
+@layer utilities {
+  /* Tekstfarver */
+  .text-primary { color: var(--color-primary); }   /* sort */
+  .text-secondary { color: var(--color-secondary); } /* hvid */
+  .text-accent { color: var(--color-accent); }    /* beige */
+
+  /* Baggrundsfarver */
+  .bg-primary { background-color: var(--color-primary); }   /* sort */
+  .bg-secondary { background-color: var(--color-secondary); } /* hvid */
+  .bg-accent { background-color: var(--color-accent); }    /* beige */
+
+  /* Borders */
+  .border-primary { border-color: var(--color-primary); }   /* sort */
+  .border-accent { border-color: var(--color-accent); }    /* beige */
 }
