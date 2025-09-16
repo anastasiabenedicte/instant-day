@@ -2,12 +2,12 @@
 const { variant = "primary", size = "medium" } = Astro.props;
 
 // Generel styling for alle knapper
-const buttonStyling = "border-2 px-16 py-4 font-sans"; // font-sans = Poppins
+const buttonStyling = "border-2 px-16 py-4 font-sans rounded-[25px]";
 
 // Styling for varianter
 const variantClasses = {
-  "primary": "border-black hover:bg-black hover:text-white hover:-skew-x-12 transition-all duration-700",
-  "secondary": "border-blue-500 hover:bg-blue-500 hover:border-blue-200"
+  "primary": "border-primary bg-primary text-secondary hover:bg-secondary hover:text-primary hover:font-bold",
+  "secondary": "border-accent bg-secondary text-primary hover:bg-primary hover:text-secondary hover:font-bold"
 };
 
 // Styling for størrelser
