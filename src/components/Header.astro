@@ -15,10 +15,11 @@ import HoverButton from "../components/hoverButton.astro";
     
     <!-- Desktop menu -->
     <nav id="desktopmenu" class="hidden lg:block">
-        <ul class="flex flex-row gap-4">
+        <ul class="flex flex-row gap-4 items-center">
             <li><HoverButton text="About" href="/about" isActive={currentPath === "about"} /></li>
             <li><HoverButton text="Nominees" href="/nominees" isActive={currentPath === "nominees"} /></li>
             <li><HoverButton text="Komponentbibliotek" href="/komponentbibliotek/" isActive={currentPath === "komponentbibliotek/"} /></li>
+            <li><HoverButton text="Submit Now" href="/submit" isDesktopButton={true} /></li>
           </ul>
           
     </nav>
@@ -31,14 +32,16 @@ import HoverButton from "../components/hoverButton.astro";
       </button>
   </div>
 
-  <!-- Mobilmenu -->
-  <nav id="mobilmenu" class="flex flex-col content-center" 
-       x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
-    <ul class="border-t-2 border-b-2 border-black">
-      <li class="text-center py-2"><a href="/about" class={currentPath === "about" ? "italic font-bold" : "italic"}>About</a></li>
-      <li class="text-center py-2"><a href="/nominees" class={currentPath === "nominees" ? "italic font-bold" : "italic"}>Nominees</a></li>
-      <li class="text-center py-2"><a href="/komponentbibliotek/" class={currentPath === "komponentbibliotek/" ? "italic font-bold" : "italic"}>Komponentbibliotek</a></li>
-    </ul>
-  </nav>
+ <!-- Mobilmenu -->
+<nav id="mobilmenu" class="flex flex-col content-center" 
+     x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+  <ul class="border-t-2 border-b-2 border-black">
+    <li class="text-center py-2"><a href="/about" class={currentPath === "about" ? "italic font-bold" : "italic"}>About</a></li>
+    <li class="text-center py-2"><a href="/nominees" class={currentPath === "nominees" ? "italic font-bold" : "italic"}>Nominees</a></li>
+    <li class="text-center py-2"><a href="/komponentbibliotek/" class={currentPath === "komponentbibliotek/" ? "italic font-bold" : "italic"}>Komponentbibliotek</a></li>
+    <li class="text-center py-2"><a href="/submit" class={currentPath === "submit" ? "italic font-bold" : "italic"}>Submit Now</a></li>
+  </ul>
+</nav>
+
 </header>
 
