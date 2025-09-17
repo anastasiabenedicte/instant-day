@@ -1,0 +1,11 @@
+---
+const { imageSrc = "", h3Text = "", h4Text = "", pText = "" } = Astro.props;
+---
+<div class="bg-accent overflow-hidden flex flex-col">
+  <img src={imageSrc} alt={h3Text} class="w-full object-cover" />
+  <div class=" flex flex-col">
+    <h3 class="h3 text-primary my-2">{h3Text}</h3>
+    <h4 class="h4 text-primary">{h4Text}</h4>
+    <p class="p-small text-primary mb-8 lg:mb-20">{pText}</p>
+  </div>
+</div>
