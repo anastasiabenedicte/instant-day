@@ -1,14 +1,63 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Heading from "../components/Heading.astro";
-import Text from "../components/Text.astro";
-import Link from "../components/Link.astro";
-import Button from "../components/Button.astro";
-import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
+import JudgeCard from "../components/JudgeCard.astro";
+
+const judges = [
+  {
+    name: "Jonas Hasle",
+    role: "Assistant lecturer, Multimedia Design programme at EK",
+    image: "/images/judge1.png"
+  },
+  {
+    name: "Birgitte Heide",
+    role: "Assistant lecturer, Multimedia Design programme at EK",
+    image: "/images/judge2.png"
+  },
+  {
+    name: "Anders Dollerup",
+    role: "Assistant lecturer, Multimedia Design programme at EK",
+    image: "/images/judge3.png"
+  },
+  {
+    name: "Stefan Grage",
+    role: "Assistant lecturer, Multimedia Design programme at EK",
+    image: "/images/judge4.png"
+  },
+  {
+    name: "Students",
+    role: "Students on the Digital Design Elective on the Multimedia Design programme at KEA",
+    image: "/images/judge5.png"
+  }
+];
 ---
 
+<MainLayout title="About">
+  <!-- Intro -->
+  <section class="bg-accent py-16 px-4 md:px-8">
+    <Heading htmlheading="h2" size="medium" stylingclasses="h2 text-primary mb-4">
+      Who are we?
+    </Heading>
+    <p class="p text-primary max-w-2xl">
+      Instant Day is a small project run by a couple of lecturers from the Multimedia Design programme 
+      at EK - Business Academy Copenhagen. Instant Day is a bi-annual project where lecturers and 
+      students collaborate on a digital design and communication project related to the Instant Day 
+      competition (this website). In essence, we just want to promote instant photography and have 
+      fun while doing it. Cheers.
+    </p>
+  </section>
 
-<MainLayout>
-  <Heading htmlheading="h1" size="large" stylingclasses="h1-footer font-sans">About</Heading>
+  <!-- Judges -->
+  <section class="py-16 px-4 md:px-8">
+    <p class="p-small text-primary mb-2">The judges</p>
+    <Heading htmlheading="h3" size="small" stylingclasses="h3 text-primary mb-8">
+      Submissions will be reviewed by:
+    </Heading>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      {judges.map((judge) => (
+        <JudgeCard name={judge.name} role={judge.role} image={judge.image} />
+      ))}
+    </div>
+  </section>
 </MainLayout>
