@@ -1,15 +1,11 @@
----
-
----
-
-<footer
-  class="bg-secondary text-primary font-sans border-t border-accent relative z-10"
->
+<footer class="bg-secondary text-primary font-sans border-t border-accent pb-4">
   <div class="container mx-auto px-4 py-12">
-    <!-- Grid til desktop -->
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+
+    <!-- Grid med 4 lige kolonner -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+
       <!-- About -->
-      <section class="md:col-span-3">
+      <section class="md:ml-8">
         <h2 class="font-bold mb-2">About /</h2>
         <p class="p text-sm leading-relaxed">
           October 18 is Instant Day – a celebration of instant photography! Grab
@@ -21,14 +17,14 @@
       </section>
 
       <!-- Contact -->
-      <section class="md:col-span-3">
+      <section>
         <h2 class="font-bold mb-2">Contact /</h2>
         <p class="p text-sm">+45 33 42 21 00</p>
         <p class="p text-sm">instant-day@gmail.com</p>
       </section>
 
       <!-- Newsletter -->
-      <section class="md:col-span-3">
+      <section>
         <h2 class="font-bold mb-2">Newsletter /</h2>
         <p class="p text-sm mb-2">Sign up for our Newsletter</p>
         <form class="flex items-center max-w-xs">
@@ -47,7 +43,7 @@
       </section>
 
       <!-- Socials -->
-      <section class="md:col-span-2 md:col-start-11">
+      <section>
         <h2 class="font-bold mb-2">Socials /</h2>
         <ul class="space-y-1 text-sm">
           <li><a href="#" class="hover:underline">Instagram ↗</a></li>
@@ -56,14 +52,13 @@
         </ul>
       </section>
     </div>
-
-    <!-- Big Title -->
-    <div class="pt-12">
-      <h1
-        class="w-full text-center text-6xl md:text-[10rem] font-extrabold tracking-widest leading-none"
-      >
-        INSTANT DAY
-      </h1>
-    </div>
   </div>
+
+  <!-- Big Title -->
+  <h1 
+    class="w-full text-center text-5xl md:text-[11rem] font-extrabold leading-none tracking-[0.25em] md:tracking-[0.2em] pl-2 md:pl-8 mt-12 mb-0.5" 
+    style="transform: scaleY(2);"
+  >
+    INSTANT DAY
+  </h1>
 </footer>

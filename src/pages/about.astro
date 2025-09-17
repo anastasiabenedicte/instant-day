@@ -31,33 +31,48 @@ const judges = [
   }
 ];
 ---
-
 <MainLayout title="About">
-  <!-- Intro -->
+  <!-- Intro Section -->
   <section class="bg-accent py-16 px-4 md:px-8">
-    <Heading htmlheading="h2" size="medium" stylingclasses="h2 text-primary mb-4">
-      Who are we?
-    </Heading>
-    <p class="p text-primary max-w-2xl">
-      Instant Day is a small project run by a couple of lecturers from the Multimedia Design programme 
-      at EK - Business Academy Copenhagen. Instant Day is a bi-annual project where lecturers and 
-      students collaborate on a digital design and communication project related to the Instant Day 
-      competition (this website). In essence, we just want to promote instant photography and have 
-      fun while doing it. Cheers.
-    </p>
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row md:items-start md:gap-12">
+      <div class="md:flex-1">
+        <Heading htmlheading="h2" size="medium" stylingclasses="h2 text-primary mb-4 text-left">
+          Who are we?
+        </Heading>
+      </div>
+      <p class="p text-primary md:flex-1 max-w-full md:max-w-none text-left">
+        Instant Day is a small project run by a couple of lecturers from the Multimedia Design programme 
+        at EK - Business Academy Copenhagen. Instant Day is a bi-annual project where lecturers and 
+        students collaborate on a digital design and communication project related to the Instant Day 
+        competition (this website). In essence, we just want to promote instant photography and have 
+        fun while doing it. Cheers.
+      </p>
+    </div>
   </section>
 
-  <!-- Judges -->
-  <section class="py-16 px-4 md:px-8">
-    <p class="p-small text-primary mb-2">The judges</p>
-    <Heading htmlheading="h3" size="small" stylingclasses="h3 text-primary mb-8">
-      Submissions will be reviewed by:
-    </Heading>
+  <!-- Judges Section -->
+  <section class="py-16 px-4 md:px-8 bg-secondary">
+    <div class="max-w-6xl mx-auto">
+      <p class="p-small text-primary mb-2 text-left">The judges</p>
+      <Heading htmlheading="h3" size="small" stylingclasses="h3 text-primary mb-8 text-left">
+        Submissions will be reviewed by:
+      </Heading>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-      {judges.map((judge) => (
-        <JudgeCard name={judge.name} role={judge.role} image={judge.image} />
-      ))}
+      <!-- Horizontal scroll container on mobile, grid on desktop -->
+      <div class="flex overflow-x-auto gap-6 px-2 snap-x snap-mandatory scrollbar-thin scrollbar-thumb-accent scrollbar-track-secondary
+                  md:grid md:grid-cols-5 md:gap-8 md:overflow-visible md:px-0 md:snap-none">
+        {judges.slice(0, 5).map((judge, index) => (
+          <div
+            class={`flex-shrink-0 snap-start flex flex-col items-start text-left
+              w-52 md:w-auto
+            `}
+          >
+            <img src={judge.image} alt={judge.name} class="w-full h-auto rounded-none mb-3 object-cover" />
+            <p class="font-bold text-primary mb-1">{judge.name}</p>
+            <p class="text-primary text-sm whitespace-normal">{judge.role}</p>
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 </MainLayout>
