@@ -1,62 +1,67 @@
 ---
---- 
+---
+
 <footer class="bg-secondary text-primary font-sans border-t border-accent">
-  <div class="container mx-auto px-4 py-8 space-y-8">
+  <div class="container mx-auto px-4 py-12">
 
-    <!-- About -->
-    <section>
-      <h2 class="font-bold">About /</h2>
-      <p class="p">
-        October 18 is Instant Day – a celebration of instant photography! 
-        Grab your Polaroid, Instax or any instant camera and share your shots. 
-        It’s not a competition, but a tribute to classic instant photography – everyone’s a winner! 
-        (And yes, there’s a prize for one lucky participant!)
-      </p>
-    </section>
+    <!-- Grid til desktop -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
 
-    <!-- Contact -->
-    <section>
-      <h2 class="font-bold">Contact /</h2>
-      <p class="p">+45 33 42 21 00</p>
-      <p class="p">instant-day@gmail.com</p>
-    </section>
+      <!-- About -->
+      <section class="md:col-span-3">
+        <h2 class="font-bold mb-2">About /</h2>
+        <p class="p text-sm leading-relaxed">
+          October 18 is Instant Day – a celebration of instant photography! 
+          Grab your Polaroid, Instax or any instant camera and share your shots. 
+          It’s not a competition, but a tribute to classic instant photography – everyone’s a winner! 
+          (And yes, there’s a prize for one lucky participant!)
+        </p>
+      </section>
 
-    <!-- Newsletter -->
-    <section>
-      <h2 class="font-bold">Newsletter /</h2>
-      <p class="p mb-2">Sign up for our Newsletter</p>
-      <form class="flex items-center max-w-sm">
-        <input 
-          type="email" 
-          placeholder="Enter e-mail..." 
-          class="flex-1 border border-accent rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary"
-        />
-        <button 
-          type="submit" 
-          class="ml-2 px-4 py-2 bg-primary text-secondary rounded-full text-sm hover:bg-accent hover:text-primary transition"
-        >
-          Sign up
-        </button>
-      </form>
-    </section>
+      <!-- Contact -->
+      <section class="md:col-span-3">
+        <h2 class="font-bold mb-2">Contact /</h2>
+        <p class="p text-sm">+45 33 42 21 00</p>
+        <p class="p text-sm">instant-day@gmail.com</p>
+      </section>
 
-    <!-- Socials -->
-    <section>
-      <h2 class="font-bold">Socials /</h2>
-      <ul class="space-y-1">
-        <li><a href="#" class="p hover:underline">Instagram ↗</a></li>
-        <li><a href="#" class="p hover:underline">Youtube ↗</a></li>
-        <li><a href="#" class="p hover:underline">Linkedin ↗</a></li>
-      </ul>
-    </section>
+      <!-- Newsletter -->
+      <section class="md:col-span-3">
+        <h2 class="font-bold mb-2">Newsletter /</h2>
+        <p class="p text-sm mb-2">Sign up for our Newsletter</p>
+        <form class="flex items-center max-w-xs">
+          <input 
+            type="email" 
+            placeholder="Enter e-mail..." 
+            class="flex-1 border border-accent rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+          />
+          <button 
+            type="submit" 
+            class="ml-2 px-4 py-2 bg-primary text-secondary rounded-full text-sm hover:bg-accent hover:text-primary transition"
+          >
+            Sign up
+          </button>
+        </form>
+      </section>
 
-<!-- Big Title -->
-<div class="pt-8 w-full">
-  <h1 class="w-full text-center text-5xl md:text-8xl font-extrabold tracking-widest">
-    INSTANT DAY
-  </h1>
-</div>
+      <!-- Socials -->
+      <section class="md:col-span-2 md:col-start-11">
+        <h2 class="font-bold mb-2">Socials /</h2>
+        <ul class="space-y-1 text-sm">
+          <li><a href="#" class="hover:underline">Instagram ↗</a></li>
+          <li><a href="#" class="hover:underline">Youtube ↗</a></li>
+          <li><a href="#" class="hover:underline">Linkedin ↗</a></li>
+        </ul>
+      </section>
 
+    </div>
+
+    <!-- Big Title -->
+    <div class="pt-12">
+      <h1 class="w-full text-center text-6xl md:text-[10rem] font-extrabold tracking-widest leading-none">
+        INSTANT DAY
+      </h1>
+    </div>
 
   </div>
 </footer>
