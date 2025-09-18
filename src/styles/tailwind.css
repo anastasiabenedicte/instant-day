@@ -1,17 +1,18 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 
 @theme {
   /* Farver */
   --color-primary: #171616; /* sort */
-  --color-secondary: #FFFFFF; /* hvid */
-  --color-accent: #E8E0E0; /* beige */
+  --color-secondary: #ffffff; /* hvid */
+  --color-accent: #e8e0e0; /* beige */
   --color-hover: #535353; /* grå */
+  --color-submit: #4b4b30; /* mørk olivengrøn */
 
   /* Typografi */
-  --font-display: 'Poppins', sans-serif;
-  --font-sans: 'Poppins', sans-serif;
+  --font-display: "Poppins", sans-serif;
+  --font-sans: "Poppins", sans-serif;
 }
 
 @layer base {
@@ -70,16 +71,32 @@
 
 @layer utilities {
   /* Tekstfarver */
-  .text-primary { color: var(--color-primary); }   /* sort */
-  .text-secondary { color: var(--color-secondary); } /* hvid */
-  .text-accent { color: var(--color-accent); }    /* beige */
+  .text-primary {
+    color: var(--color-primary);
+  } /* sort */
+  .text-secondary {
+    color: var(--color-secondary);
+  } /* hvid */
+  .text-accent {
+    color: var(--color-accent);
+  } /* beige */
 
   /* Baggrundsfarver */
-  .bg-primary { background-color: var(--color-primary); }   /* sort */
-  .bg-secondary { background-color: var(--color-secondary); } /* hvid */
-  .bg-accent { background-color: var(--color-accent); }    /* beige */
+  .bg-primary {
+    background-color: var(--color-primary);
+  } /* sort */
+  .bg-secondary {
+    background-color: var(--color-secondary);
+  } /* hvid */
+  .bg-accent {
+    background-color: var(--color-accent);
+  } /* beige */
 
   /* Borders */
-  .border-primary { border-color: var(--color-primary); }   /* sort */
-  .border-accent { border-color: var(--color-accent); }    /* beige */
+  .border-primary {
+    border-color: var(--color-primary);
+  } /* sort */
+  .border-accent {
+    border-color: var(--color-accent);
+  } /* beige */
 }
