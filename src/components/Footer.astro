@@ -1,64 +1,46 @@
-<footer class="bg-secondary text-primary font-sans border-t border-accent pb-4">
-  <div class="container mx-auto px-4 py-12">
+---
+import HoverButton from "../components/hoverButton.astro";
+---
+<footer class="bg-secondary pt-4">
+  <div class="w-full px-4 md:px-8 border-t border-gray-200">
 
-    <!-- Grid med 4 lige kolonner -->
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+   <!-- 4 bokse med flex -->
+<div class="flex flex-col lg:flex-row mt-6 text-left gap-8 lg:gap-12">
 
-      <!-- About -->
-      <section class="md:ml-8">
-        <h2 class="font-bold mb-2">About /</h2>
-        <p class="p text-sm leading-relaxed">
-          October 18 is Instant Day – a celebration of instant photography! Grab
-          your Polaroid, Instax or any instant camera and share your shots. It’s
-          not a competition, but a tribute to classic instant photography –
-          everyone’s a winner! (And yes, there’s a prize for one lucky
-          participant!)
-        </p>
-      </section>
+  <!-- About -->
+  <div class="flex-1">
+    <h2 class="text-xl font-semibold mb-2 lg:mb-4">About/</h2>
+    <p class="text-p-small text-primary">
+      October 18 is Instant Day – a celebration of instant photography! Grab your Polaroid, Instax or any instant camera and share your shots. It’s not a competition, but a tribute to classic instant photography – everyone’s a winner! (And yes, there’s a prize for one lucky participant!)
+    </p>
+  </div>
 
-      <!-- Contact -->
-      <section>
-        <h2 class="font-bold mb-2">Contact /</h2>
-        <p class="p text-sm">+45 33 42 21 00</p>
-        <p class="p text-sm">instant-day@gmail.com</p>
-      </section>
+  <!-- Contact -->
+  <div>
+    <h2 class="text-xl font-semibold mb-2 lg:mb-4">Contact/</h2>
+    <p class="text-p-small text-primary">+45 33 42 21 00.</p>
+    <p class="text-p-small text-primary">instant-day@gmail.com</p>
+  </div>
 
-      <!-- Newsletter -->
-      <section>
-        <h2 class="font-bold mb-2">Newsletter /</h2>
-        <p class="p text-sm mb-2">Sign up for our Newsletter</p>
-        <form class="flex items-center max-w-xs">
-          <input
-            type="email"
-            placeholder="Enter e-mail..."
-            class="flex-1 border border-accent rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary"
-          />
-          <button
-            type="submit"
-            class="ml-2 px-4 py-2 bg-primary text-secondary rounded-full text-sm hover:bg-accent hover:text-primary transition"
-          >
-            Sign up
-          </button>
-        </form>
-      </section>
+  <!-- Newsletter -->
+  <div>
+    <h2 class="text-xl font-semibold mb-2 lg:mb-4">Newsletter/</h2>
+    <p class="text-p-small text-primary">Sign up for our Newsletter</p>
+  </div>
 
-      <!-- Socials -->
-      <section>
-        <h2 class="font-bold mb-2">Socials /</h2>
-        <ul class="space-y-1 text-sm">
-          <li><a href="#" class="hover:underline">Instagram ↗</a></li>
-          <li><a href="#" class="hover:underline">Youtube ↗</a></li>
-          <li><a href="#" class="hover:underline">Linkedin ↗</a></li>
-        </ul>
-      </section>
+  <!-- Socials -->
+  <div class="lg:ml-auto text-left lg:text-right">
+    <h2 class="text-xl font-semibold mb-2 lg:mb-4">Socials/</h2>
+    <div class="flex flex-col space-y-2 lg:items-end">
+      <HoverButton text="Instagram" href="https://instagram.com" />
+      <HoverButton text="YouTube" href="https://youtube.com" />
+      <HoverButton text="LinkedIn" href="https://linkedin.com" />
     </div>
   </div>
 
-  <!-- Big Title -->
-  <h1 
-    class="w-full text-center text-5xl md:text-[11rem] font-extrabold leading-none tracking-[0.25em] md:tracking-[0.2em] pl-2 md:pl-8 mt-12 mb-0.5" 
-    style="transform: scaleY(2);"
-  >
-    INSTANT DAY
-  </h1>
+</div>
+<div class="w-screen -mx-4 lg:-mx-8 flex justify-center bg-secondary mt-12 p-4 lg:p-8">
+  <img src="/public/images/footer_logo.svg" alt="Footer Logo" class="w-full object-contain" />
+</div>
+
 </footer>
