@@ -9,19 +9,25 @@ import "../styles/tailwind.css";
 ---
 
 <MainLayout title="Titel">
-  <main class="container mx-auto">
-    <section class="h-125">
-      <h1 class="text-7xl font-bold text-center">INSTANT DAY</h1>
+  <main class="">
+    <section class="h-130 md:h-150 lg:h-230">
+      <h1 class="text-6xl font-bold text-center md:text-[90px] lg:text-[150px]">
+        INSTANT DAY
+      </h1>
       <img
-        src="/images/polaroid_placeholder.jpg"
+        src="/images/hero-polaroid.JPG"
         alt="Polaroid"
-        class="w-auto h-90 mx-auto"
+        class="w-auto h-90 mx-auto md:h-110 lg:h-150"
       />
     </section>
 
-    <section class="mx-3 h-60">
-      <h4 class="font-bold text-sm pb-2">what is instant day?</h4>
-      <p class="text-xs pr-3 leading-relaxed">
+    <section class="mx-3 h-60 md:h-80 lg:h-100">
+      <h4 class="font-bold text-sm pb-2 md:text-[18px] lg:text-[22px]">
+        what is instant day?
+      </h4>
+      <p
+        class="text-xs pr-3 leading-relaxed md:text-base md:w-200 lg:text-[20px] lg:w-270"
+      >
         October 18 is Instant Day - a day all about celebrating instant
         photography. So get out your Polaroid, Instax or whatever instant
         photography camera you are using, and show us your instants. Instant Day
@@ -32,18 +38,20 @@ import "../styles/tailwind.css";
       </p>
     </section>
 
-    <section class="bg-[#E8E0E0] pt-12">
-      <div class="container mx-auto px-4">
-        <h2 class="text-[30px] font-bold pb-10">How to participate</h2>
+    <section class="bg-[#E8E0E0] pt-12 lg:h-300">
+      <div class="px-4 md:mx-0 lg:mx-1">
+        <h2 class="text-[30px] font-bold pb-10 md:text-[60px] lg:text-[80px]">
+          How to participate
+        </h2>
 
         <!-- Grid med 2x2 layout -->
-        <div class="grid grid-cols-2">
+        <div class="grid grid-cols-2 lg:grid-cols-4 lg:pt-20">
           <!-- Step 1 -->
           <div
-            class="border border-t-0 border-l-2 p-6 flex flex-col justify-between h-120"
+            class="border border-t-0 border-l-2 p-6 flex flex-col justify-between h-120 lg:h-150 lg:border-l-1 lg:border-r-1 hover:h-160 transition-all duration-600 ease-in-out"
           >
-            <span class="text-[58px] font-bold mb-4">1</span>
-            <div class="text-xs">
+            <span class="text-[58px] font-bold mb-4 lg:text-[80]">1</span>
+            <div class="text-xs lg:text-base">
               <h3 class="font-bold uppercase mb-2">Take a photo</h3>
               <p class="leading-relaxed">
                 Take a photo of your instant with your smartphone (or scan it
@@ -55,10 +63,10 @@ import "../styles/tailwind.css";
 
           <!-- Step 2 -->
           <div
-            class="border border-t-0 border-r-2 p-6 flex flex-col justify-between"
+            class="border border-t-0 border-r-2 p-6 flex flex-col justify-between lg:h-140 lg:border-l-0 lg:border-r-0 hover:h-150 transition-all duration-600 ease-in-out"
           >
-            <span class="text-[58px] font-bold mb-4">2</span>
-            <div class="pb-20 text-xs">
+            <span class="text-[58px] font-bold mb-4 lg:text-[80]">2</span>
+            <div class="pb-20 text-xs lg:text-base lg:pb-0">
               <h3 class="font-bold uppercase mb-2">Upload</h3>
               <p class="leading-relaxed">
                 Upload your photo and credentials in the form below.
@@ -68,10 +76,10 @@ import "../styles/tailwind.css";
 
           <!-- Step 3 -->
           <div
-            class="border border-b-2 border-l-2 border-r-2 p-6 flex flex-col justify-between h-120"
+            class="border border-b-2 border-l-2 border-r-2 p-6 flex flex-col justify-between h-120 lg:h-160 lg:border-t-0 lg:border-l-1 lg:border-r-1 lg:border-b-1 hover:h-170 transition-all duration-600 ease-in-out"
           >
-            <span class="text-[58px] font-bold mb-4">3</span>
-            <div class="text-xs">
+            <span class="text-[58px] font-bold mb-4 lg:text-[80]">3</span>
+            <div class="text-xs lg:text-base">
               <h3 class="font-bold uppercase mb-2">Terms & Conditions</h3>
               <p class="leading-relaxed">
                 Agree to our terms and conditions. The short version:
@@ -84,10 +92,10 @@ import "../styles/tailwind.css";
 
           <!-- Step 4 -->
           <div
-            class="border border-b-2 border-r-2 border-l-0 p-6 flex flex-col justify-between h-100"
+            class="border border-b-2 border-r-2 border-l-0 p-6 flex flex-col justify-between h-100 lg:h-150 lg:border-t-0 lg:border-l-0 lg:border-r-1 lg:border-b-1 hover:h-160 transition-all duration-600 ease-in-out"
           >
-            <span class="text-[58px] font-bold mb-4">4</span>
-            <div class="text-xs">
+            <span class="text-[58px] font-bold mb-4 lg:text-[80]">4</span>
+            <div class="text-xs lg:text-base">
               <h3 class="font-bold uppercase mb-2">Submissions</h3>
               <p class="leading-relaxed">
                 You can make up to 5 submissions – go through step 1–3 for each
@@ -97,27 +105,33 @@ import "../styles/tailwind.css";
           </div>
         </div>
         <div class="flex justify-center pt-20 pb-20">
-          <button
-            type="submit"
-            class="px-5 py-3 bg-primary text-secondary rounded-full text-sm font-bold hover:bg-[var(--color-hover)] hover:text-secondary transition"
+          <a
+            href="/submit"
+            class="cursor-pointer px-5 py-3 bg-primary text-secondary rounded-full text-sm font-bold
+         hover:bg-[var(--color-hover)] hover:text-secondary
+         transition-all duration-300 ease-in-out"
           >
             Submit now
-          </button>
+          </a>
         </div>
       </div>
     </section>
 
     <section class="pb-15">
-      <h3 class="mt-20 font-bold text-sm pl-3 pb-3">
+      <h3
+        class="mt-20 font-bold text-sm pl-3 pb-3 md:text-[18px] lg:text-[20px] md:relative"
+      >
         Why instant Photography?
       </h3>
       <img
         src="/images/index_placeholder.png"
         alt="placeholder"
-        class="w-full px-3 mb-15"
+        class="w-full px-3 mb-15 lg:w-200 lg:mt-60"
       />
 
-      <div class="grid grid-cols-[3fr_1fr] pl-3 mb-15 text-xs">
+      <div
+        class="grid grid-cols-[3fr_1fr] pl-3 mb-15 text-xs lg:text-base lg:absolute lg:w-182 lg:top-675 lg:left-195"
+      >
         <p>
           Instant Photography is a testament to life: It all started back in the
           1940’s with a 3 year old kid. She wanted to see her fathers images
@@ -127,7 +141,9 @@ import "../styles/tailwind.css";
         </p>
       </div>
 
-      <div class="grid grid-cols-[1fr_3fr] pr-3 text-xs">
+      <div
+        class="grid grid-cols-[1fr_3fr] pr-3 text-xs lg:text-base lg:absolute lg:w-182 lg:top-725 lg:left-185"
+      >
         <p class="col-start-2">
           Instant photography turned into big business in the 70’s and 80’s,
           until the digital era almost killed the industry. The massive amount
@@ -139,21 +155,26 @@ import "../styles/tailwind.css";
       </div>
     </section>
 
-    <section>
-      <h3 class="mt-20 font-bold text-sm pl-3 mb-8">
-        Take a look at some of the submissions from the past for inspiration
+    <section class="lg:grid lg:grid-cols-3 lg:gap-20">
+      <h3 class="mt-20 font-bold text-sm pl-3 mb-8 lg:mt-0 lg:text-[20px]">
+        Take a look at some of the submissions from the <br
+          class="lg:none"
+        />past for inspiration
       </h3>
 
-      <p class="text-xs px-3">
+      <p class="text-xs px-3 lg:text-base">
         The Polaroid collection was a large collection of instant photographs
         assembled by the Polaroid corporation and featured work from a lot of
         famous photographers. The collection was split into various parts and
         put on auction when the Polaroid corporation went into bankruptcy in
         2008. Luckily, you can find books with photographs from the collection,
-        for instance The Polaroid Book by Steve Crist and Barbara Hitchcock. <br
-        /><br />Dan Isaac Wallin is a swedish art photographer, who uses large
-        format and vintage polaroid cameras for his work. His work hangs in
-        numerous houses as posters. <br /><br />Mette Kelter is a danish art
+        for instance The Polaroid Book by Steve Crist and Barbara Hitchcock.
+      </p>
+
+      <p class="text-xs px-3 pt-4 lg:pt-0 lg:text-base">
+        Dan Isaac Wallin is a swedish art photographer, who uses large format
+        and vintage polaroid cameras for his work. His work hangs in numerous
+        houses as posters. <br /><br />Mette Kelter is a danish art
         photographer, who often experiments with deliberate destruction of the
         chemical process in instant photos. One of the key words here is
         unpredictability in the work process, which leads to interesting and
@@ -164,12 +185,29 @@ import "../styles/tailwind.css";
       </p>
     </section>
 
-    <section class="mt-20 relative">
+    <section class="mt-20 relative overflow-hidden">
       <img
         src="/images/polaroid_cirkel.png"
         alt="Rotérende billede"
-        class="w-full mx-auto animate-spin [animation-duration:17s] -mb-50"
+        class="w-full mx-auto animate-spin [animation-duration:17s] -mb-50 lg:w-250 lg:-mb-120"
       />
+
+      <div
+        class="absolute top-40 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center lg:top-80"
+      >
+        <h3 class="font-bold">Past submissions</h3>
+
+        <div class="flex justify-center pt-6">
+          <a
+            href="/nominees"
+            class="cursor-pointer px-4 py-2 bg-primary text-secondary rounded-full text-xs font-bold
+          hover:bg-[var(--color-hover)] hover:text-secondary
+          transition-all duration-300 ease-in-out lg:px-5 lg:py-3 lg:text-sm"
+          >
+            View nominees
+          </a>
+        </div>
+      </div>
     </section>
   </main>
 </MainLayout>
