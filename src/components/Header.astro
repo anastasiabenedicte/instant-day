@@ -3,8 +3,9 @@ const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 import HoverButton from "../components/hoverButton.astro";
 ---
-<header x-data="{ showmenu: false }" class="font-sans">
-  <div id="navbar" class="container mx-auto p-4 flex flex-row justify-between items-center">
+<header x-data="{ showmenu: false }" class="font-sans fixed top-0 left-0 w-full z-50 bg-secondary">
+    <div id="navbar" class="w-full p-4 flex flex-row justify-between items-center">
+
     
     <!-- Logo -->
     <div id="logo">
