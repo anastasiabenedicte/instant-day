@@ -11,84 +11,195 @@ import NomineesCard from "../components/NomineesCard.astro";
 
 // Kortdata
 const cards = [
-  { imageSrc: "/images/01-nominees.webp", h3Text: "01 - Amager Fælled", h4Text: "Submitter: Stefan Grage", pText: "Description/story: A little snap from Amager Fælled, a large common in the southwestern part of Copenhagen, Denmark. Taken with a Lomomatic Square." },
-  { imageSrc: "/images/02-nominees.webp", h3Text: "02 - Amager Forbrænding", h4Text: "Submitter: Stefan Grage", pText: "Description/story: I’d give my right arm for a cigarette. Taken with a Lomomatic Square." },
-  { imageSrc: "/images/03-nominees.webp", h3Text: "03 - Amager Strand", h4Text: "Submitter: Stefan Grage", pText: "Description/story: From this angle, copenhagen looks like a big city. Taken with a Polaroid Now+ gen 2, with a yellow tint filter." },
-  { imageSrc: "/images/04-nominees.webp", h3Text: "04 - Hands off my happy meal!", h4Text: "Submitter: Stefan Grage", pText: "Description/story: A casual snap from Burger King. As it shows, the youngest kid didn’t want to share his happy meal (or whatever a kids meal is called in Burger King). Taken with an Instax Mini (can’t remember which camera)." },
-  { imageSrc: "/images/05-nominees.webp", h3Text: "05 - 2 x Ørestad", h4Text: "Submitter: Stefan Grage", pText: "Description/story: A double exposure from my neighbourhood, Ørestad. Taken with a Lomomatic Square." },
-  { imageSrc: "/images/06-nominees.webp", h3Text: "06 - Løserup Strand", h4Text: "Submitter: Stefan Grage", pText: "Description/story: Too cold to take a dip. So I took a photo instead. The polaroid had an awful magenta color cast, but I ended up liking it. Taken with a Polaroid Now+ gen 2 and an i-Type film, which I probably stored incorrectly." },
-  { imageSrc: "/images/07-nominees.webp", h3Text: "07 - New meets old", h4Text: "Submitter: Stefan Grage", pText: "Description/story: I wanted to catch the new city development district, Ørestad, in a shade of old school. So I used a Polaroid Now+ gen 2 in tripod mode with an i-Type black and white film in order to make a long exposure." },
-  { imageSrc: "/images/08-nominees.webp", h3Text: "08 - Karlstrup & coffee", h4Text: "Submitter: Stefan Grage", pText: "Description/story: The scenic beauty of a former lime pit with a twist of coffee: The polaroid was soaked in coffee for a couple of weeks. That gave it a nice tan. Polaroid flip." },
-  { imageSrc: "/images/09-nominees.webp", h3Text: "09 - Amager Strand at night", h4Text: "Submitter: Stefan Grage", pText: "Description/story: Amager Strand, Copenhagen. Locally referred to as Copenhagens mini-manhattan. Long exposure, Polaroid Now+ gen 2 in manual mode with an i-Type color film in order to make a long exposure." },
-  { imageSrc: "/images/10-nominees.webp", h3Text: "10 - Close to the sea", h4Text: "Submitter: Stefan Grage", pText: "Description/story: Amager Strand is close to the sea. So I wanted to give this polaroid a twist of water: The polaroid soaked for around three weeks in water. I used a Polaroid Now+ gen 2. " },
-  { imageSrc: "/images/11-nominees.webp", h3Text: "11 - Micro adventure 1", h4Text: "Submitter: Stefan Grage", pText: "Description/story: The beach at my summer house in Løserup. Expired instax mini film. I microwaved it. I should have studied how to microwave an instant image: It caught fire in the oven. " },
-  { imageSrc: "/images/12-nominees.webp", h3Text: "12 - Micro adventure 2", h4Text: "Submitter: Stefan Grage", pText: "Description/story: The beach at my summer house in Løserup. Expired instax mini film. I microwaved it. I should have studied how to microwave an instant image: It caught fire in the oven. " },
-  { imageSrc: "/images/13-nominees.webp", h3Text: "13 - Nordhavn at night", h4Text: "Submitter: Stefan Grage", pText: "Description/story: Nordhavn, Copenhagen, at night. Long exposure with expired film. I used a Polaroid Flip in manual mode with an i-Type film in order to make a long exposure." },
-  { imageSrc: "/images/14-nominees.webp", h3Text: "14 - Beer beach", h4Text: "Submitter: Stefan Grage", pText: "Description/story: Løserup strand in Holbæk. I often go there to quelch beer. So I wanted to give this polaroid a twist of beer: The polaroid soaked for around three weeks in Pripps blå - a cheap, swedish beer. I used a Polaroid Flip and expired film. " },
-  { imageSrc: "/images/15-nominees.webp", h3Text: "15 - Beer abstract", h4Text: "Submitter: Stefan Grage", pText: "Description/story: Løserup strand in Holbæk. The polaroid was soaked in beer for around three weeks, which turned the landscape into an unrecognizable pattern of colors. I used a Polaroid Flip, expired film and a can of Pripps blå beer. " },
-  { imageSrc: "/images/16-nominees.webp", h3Text: "16 - Vejlands allé", h4Text: "Submitter: Stefan Grage", pText: "Description/story: Big road, lots of traffic. Too wide for a single shot. So I composed this image on an old Minolta panoramic camera, and printed in on a Polaroid Lab with expired film, cut up the polaroids (lazy dry lift) and stitched them together on my scanner." },
+  {
+    imageSrc: "/images/01-nominees.webp",
+    h3Text: "01 - Amager Fælled",
+    h4Text: "Submitter: Stefan Grage",
+    pText:
+      "Description/story: A little snap from Amager Fælled, a large common in the southwestern part of Copenhagen, Denmark. Taken with a Lomomatic Square.",
+  },
+  {
+    imageSrc: "/images/02-nominees.webp",
+    h3Text: "02 - Amager Forbrænding",
+    h4Text: "Submitter: Stefan Grage",
+    pText:
+      "Description/story: I’d give my right arm for a cigarette. Taken with a Lomomatic Square.",
+  },
+  {
+    imageSrc: "/images/03-nominees.webp",
+    h3Text: "03 - Amager Strand",
+    h4Text: "Submitter: Stefan Grage",
+    pText:
+      "Description/story: From this angle, copenhagen looks like a big city. Taken with a Polaroid Now+ gen 2, with a yellow tint filter.",
+  },
+  {
+    imageSrc: "/images/04-nominees.webp",
+    h3Text: "04 - Hands off my happy meal!",
+    h4Text: "Submitter: Stefan Grage",
+    pText:
+      "Description/story: A casual snap from Burger King. As it shows, the youngest kid didn’t want to share his happy meal (or whatever a kids meal is called in Burger King). Taken with an Instax Mini (can’t remember which camera).",
+  },
+  {
+    imageSrc: "/images/05-nominees.webp",
+    h3Text: "05 - 2 x Ørestad",
+    h4Text: "Submitter: Stefan Grage",
+    pText:
+      "Description/story: A double exposure from my neighbourhood, Ørestad. Taken with a Lomomatic Square.",
+  },
+  {
+    imageSrc: "/images/06-nominees.webp",
+    h3Text: "06 - Løserup Strand",
+    h4Text: "Submitter: Stefan Grage",
+    pText:
+      "Description/story: Too cold to take a dip. So I took a photo instead. The polaroid had an awful magenta color cast, but I ended up liking it. Taken with a Polaroid Now+ gen 2 and an i-Type film, which I probably stored incorrectly.",
+  },
+  {
+    imageSrc: "/images/07-nominees.webp",
+    h3Text: "07 - New meets old",
+    h4Text: "Submitter: Stefan Grage",
+    pText:
+      "Description/story: I wanted to catch the new city development district, Ørestad, in a shade of old school. So I used a Polaroid Now+ gen 2 in tripod mode with an i-Type black and white film in order to make a long exposure.",
+  },
+  {
+    imageSrc: "/images/08-nominees.webp",
+    h3Text: "08 - Karlstrup & coffee",
+    h4Text: "Submitter: Stefan Grage",
+    pText:
+      "Description/story: The scenic beauty of a former lime pit with a twist of coffee: The polaroid was soaked in coffee for a couple of weeks. That gave it a nice tan. Polaroid flip.",
+  },
+  {
+    imageSrc: "/images/09-nominees.webp",
+    h3Text: "09 - Amager Strand at night",
+    h4Text: "Submitter: Stefan Grage",
+    pText:
+      "Description/story: Amager Strand, Copenhagen. Locally referred to as Copenhagens mini-manhattan. Long exposure, Polaroid Now+ gen 2 in manual mode with an i-Type color film in order to make a long exposure.",
+  },
+  {
+    imageSrc: "/images/10-nominees.webp",
+    h3Text: "10 - Close to the sea",
+    h4Text: "Submitter: Stefan Grage",
+    pText:
+      "Description/story: Amager Strand is close to the sea. So I wanted to give this polaroid a twist of water: The polaroid soaked for around three weeks in water. I used a Polaroid Now+ gen 2. ",
+  },
+  {
+    imageSrc: "/images/11-nominees.webp",
+    h3Text: "11 - Micro adventure 1",
+    h4Text: "Submitter: Stefan Grage",
+    pText:
+      "Description/story: The beach at my summer house in Løserup. Expired instax mini film. I microwaved it. I should have studied how to microwave an instant image: It caught fire in the oven. ",
+  },
+  {
+    imageSrc: "/images/12-nominees.webp",
+    h3Text: "12 - Micro adventure 2",
+    h4Text: "Submitter: Stefan Grage",
+    pText:
+      "Description/story: The beach at my summer house in Løserup. Expired instax mini film. I microwaved it. I should have studied how to microwave an instant image: It caught fire in the oven. ",
+  },
+  {
+    imageSrc: "/images/13-nominees.webp",
+    h3Text: "13 - Nordhavn at night",
+    h4Text: "Submitter: Stefan Grage",
+    pText:
+      "Description/story: Nordhavn, Copenhagen, at night. Long exposure with expired film. I used a Polaroid Flip in manual mode with an i-Type film in order to make a long exposure.",
+  },
+  {
+    imageSrc: "/images/14-nominees.webp",
+    h3Text: "14 - Beer beach",
+    h4Text: "Submitter: Stefan Grage",
+    pText:
+      "Description/story: Løserup strand in Holbæk. I often go there to quelch beer. So I wanted to give this polaroid a twist of beer: The polaroid soaked for around three weeks in Pripps blå - a cheap, swedish beer. I used a Polaroid Flip and expired film. ",
+  },
+  {
+    imageSrc: "/images/15-nominees.webp",
+    h3Text: "15 - Beer abstract",
+    h4Text: "Submitter: Stefan Grage",
+    pText:
+      "Description/story: Løserup strand in Holbæk. The polaroid was soaked in beer for around three weeks, which turned the landscape into an unrecognizable pattern of colors. I used a Polaroid Flip, expired film and a can of Pripps blå beer. ",
+  },
+  {
+    imageSrc: "/images/16-nominees.webp",
+    h3Text: "16 - Vejlands allé",
+    h4Text: "Submitter: Stefan Grage",
+    pText:
+      "Description/story: Big road, lots of traffic. Too wide for a single shot. So I composed this image on an old Minolta panoramic camera, and printed in on a Polaroid Lab with expired film, cut up the polaroids (lazy dry lift) and stitched them together on my scanner.",
+  },
 ];
-
 ---
 
 <MainLayout>
-    <section class="container mx-auto flex flex-col lg:flex-row items-start gap-4 p-4 py-8 lg:py-20">
-      <!-- Tekst venstre -->
-      <div class="flex flex-col lg:w-1/2 order-1 space-y-4">
-        <!-- Overskrift -->
-        <h2 class="h2 font-bold text-primary lg:mt-8 lg:mb-6">Winner</h2>
+  <section
+    class="container mx-auto flex flex-col lg:flex-row items-start gap-4 p-4 py-8 lg:py-20"
+  >
+    <!-- Tekst venstre -->
+    <div class="flex flex-col lg:w-1/2 order-1 space-y-4">
+      <!-- Overskrift -->
+      <h2 class="h2 font-bold text-primary lg:mt-8 lg:mb-6">Winner</h2>
 
-  
-        <!-- Billede kun på mobil -->
-        <img src="/public/images/winner.webp" alt="Winner image" class="w-full object-cover block lg:hidden" />
-        <h4 class="h3 md:h4 text-primary mb-8">
-            <span class="font-bold">Submission Title:</span> Sunset Reflections
-          </h4>
-        <p class="p-small text-primary"><span class="font-bold">Name:</span> Emma Johnson</p>
-        <p class="p-small text-primary"><span class="font-bold">Location:</span> Copenhagen, Denmark</p>
-        <p class="p-small text-primary"><span class="font-bold">Instagram:</span> @emmaj_photography</p>
+      <!-- Billede kun på mobil -->
+      <img
+        src="/images/winner.webp"
+        alt="Winner image"
+        class="w-full object-cover block lg:hidden"
+      />
+      <h4 class="h3 md:h4 text-primary mb-8">
+        <span class="font-bold">Submission Title:</span> Sunset Reflections
+      </h4>
+      <p class="p-small text-primary">
+        <span class="font-bold">Name:</span> Emma Johnson
+      </p>
+      <p class="p-small text-primary">
+        <span class="font-bold">Location:</span> Copenhagen, Denmark
+      </p>
+      <p class="p-small text-primary">
+        <span class="font-bold">Instagram:</span> @emmaj_photography
+      </p>
 
-        <!-- Beskrivelsen -->
-        <p class="p-small text-primary mt-6">
-          <span class="font-bold">Description:</span> I captured this moment on a quiet evening in Copenhagen, just as the sun was setting over the lakes. The water reflected the warm colors of the sky, and a couple of swans glided by at the perfect time. It was one of those fleeting moments where everything lined up — the light, the movement, the atmosphere. With my Polaroid in hand, I managed to freeze it forever, and it still takes me back to that calm, golden evening every time I look at it.
-        </p>
-      </div>
-  
-      <!-- Billede højre kun på desktop -->
-      <div class="lg:w-1/2 order-2 lg:ml-6">
-        <img src="/public/images/winner.webp" alt="Winner image" class="w-full object-cover hidden lg:block" />
-      </div>
-    </section>
-    <section class="w-full p-4 bg-accent">
-        <div class="container mx-auto">
-          <!-- Sticky header med fading baggrund -->
-          <div class="sticky top-0 z-10">
-            <div class="flex justify-between items-center pt-24 py-2 bg-gradient-to-b from-accent via-accent/100 to-accent/95">
-              <h2 class="h2 font-bold">Nominees</h2>
-              <p class="text-sm text-gray-700">(16 nominations)</p>
-            </div>
-          </div>
-      
-          <!-- Cards grid -->
-          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
-            {cards.map(card => (
-              <NomineesCard 
-                imageSrc={card.imageSrc}
-                h3Text={card.h3Text}
-                h4Text={card.h4Text}
-                pText={card.pText}
-              />
-            ))}
-          </div>
+      <!-- Beskrivelsen -->
+      <p class="p-small text-primary mt-6">
+        <span class="font-bold">Description:</span> I captured this moment on a quiet
+        evening in Copenhagen, just as the sun was setting over the lakes. The water
+        reflected the warm colors of the sky, and a couple of swans glided by at
+        the perfect time. It was one of those fleeting moments where everything lined
+        up — the light, the movement, the atmosphere. With my Polaroid in hand, I
+        managed to freeze it forever, and it still takes me back to that calm, golden
+        evening every time I look at it.
+      </p>
+    </div>
+
+    <!-- Billede højre kun på desktop -->
+    <div class="lg:w-1/2 order-2 lg:ml-6">
+      <img
+        src="/images/winner.webp"
+        alt="Winner image"
+        class="w-full object-cover hidden lg:block"
+      />
+    </div>
+  </section>
+  <section class="w-full p-4 bg-accent">
+    <div class="container mx-auto">
+      <!-- Sticky header med fading baggrund -->
+      <div class="sticky top-0 z-10">
+        <div
+          class="flex justify-between items-center pt-24 py-2 bg-gradient-to-b from-accent via-accent/100 to-accent/95"
+        >
+          <h2 class="h2 font-bold">Nominees</h2>
+          <p class="text-sm text-gray-700">(16 nominations)</p>
         </div>
-      </section>
-      
-      
-    
+      </div>
 
-
-  </MainLayout>
-  
-  
-  
-  
+      <!-- Cards grid -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
+        {
+          cards.map((card) => (
+            <NomineesCard
+              imageSrc={card.imageSrc}
+              h3Text={card.h3Text}
+              h4Text={card.h4Text}
+              pText={card.pText}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</MainLayout>

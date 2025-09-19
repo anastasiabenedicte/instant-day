@@ -1,46 +1,54 @@
 ---
 import HoverButton from "../components/hoverButton.astro";
 ---
+
 <footer class="bg-secondary pt-4 lg:pt-12">
   <div class="w-full px-4 md:px-8 border-t border-gray-200 lg:pt-12">
+    <!-- 4 bokse med flex -->
+    <div class="flex flex-col lg:flex-row mt-6 text-left gap-8 lg:gap-12">
+      <!-- About -->
+      <div class="flex-1">
+        <h2 class="text-xl font-semibold mb-2 lg:mb-4">About/</h2>
+        <p class="text-p-small text-primary">
+          October 18 is Instant Day – a celebration of instant photography! Grab
+          your Polaroid, Instax or any instant camera and share your shots. It’s
+          not a competition, but a tribute to classic instant photography –
+          everyone’s a winner! (And yes, there’s a prize for one lucky
+          participant!)
+        </p>
+      </div>
 
-   <!-- 4 bokse med flex -->
-<div class="flex flex-col lg:flex-row mt-6 text-left gap-8 lg:gap-12">
+      <!-- Contact -->
+      <div>
+        <h2 class="text-xl font-semibold mb-2 lg:mb-4">Contact/</h2>
+        <p class="text-p-small text-primary">+45 33 42 21 00.</p>
+        <p class="text-p-small text-primary">instant-day@gmail.com</p>
+      </div>
 
-  <!-- About -->
-  <div class="flex-1">
-    <h2 class="text-xl font-semibold mb-2 lg:mb-4">About/</h2>
-    <p class="text-p-small text-primary">
-      October 18 is Instant Day – a celebration of instant photography! Grab your Polaroid, Instax or any instant camera and share your shots. It’s not a competition, but a tribute to classic instant photography – everyone’s a winner! (And yes, there’s a prize for one lucky participant!)
-    </p>
-  </div>
+      <!-- Newsletter -->
+      <div>
+        <h2 class="text-xl font-semibold mb-2 lg:mb-4">Newsletter/</h2>
+        <p class="text-p-small text-primary">Sign up for our Newsletter</p>
+      </div>
 
-  <!-- Contact -->
-  <div>
-    <h2 class="text-xl font-semibold mb-2 lg:mb-4">Contact/</h2>
-    <p class="text-p-small text-primary">+45 33 42 21 00.</p>
-    <p class="text-p-small text-primary">instant-day@gmail.com</p>
-  </div>
-
-  <!-- Newsletter -->
-  <div>
-    <h2 class="text-xl font-semibold mb-2 lg:mb-4">Newsletter/</h2>
-    <p class="text-p-small text-primary">Sign up for our Newsletter</p>
-  </div>
-
-  <!-- Socials -->
-  <div class="lg:ml-auto text-left lg:text-right">
-    <h2 class="text-xl font-semibold mb-2 lg:mb-4">Socials/</h2>
-    <div class="flex flex-col space-y-2 lg:items-end">
-      <HoverButton text="Instagram" href="https://instagram.com" />
-      <HoverButton text="YouTube" href="https://youtube.com" />
-      <HoverButton text="LinkedIn" href="https://linkedin.com" />
+      <!-- Socials -->
+      <div class="lg:ml-auto text-left lg:text-right">
+        <h2 class="text-xl font-semibold mb-2 lg:mb-4">Socials/</h2>
+        <div class="flex flex-col space-y-2 lg:items-end">
+          <HoverButton text="Instagram" href="https://instagram.com" />
+          <HoverButton text="YouTube" href="https://youtube.com" />
+          <HoverButton text="LinkedIn" href="https://linkedin.com" />
+        </div>
+      </div>
+    </div>
+    <div
+      class="w-screen -mx-4 lg:-mx-8 flex justify-center bg-secondary mt-12 p-4 lg:p-8"
+    >
+      <img
+        src="/images/footer_logo.svg"
+        alt="Footer Logo"
+        class="w-full object-contain"
+      />
     </div>
   </div>
-
-</div>
-<div class="w-screen -mx-4 lg:-mx-8 flex justify-center bg-secondary mt-12 p-4 lg:p-8">
-  <img src="/public/images/footer_logo.svg" alt="Footer Logo" class="w-full object-contain" />
-</div>
-
 </footer>
